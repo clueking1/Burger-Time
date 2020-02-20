@@ -2,17 +2,18 @@ const con = require('./connection')
 
 const orm = {
     selectAll: function() {
-        const queryString = 'SELECT * FROM burgers_db'
+        const queryString = 'SELECT * FROM burgers'
        return new Promise((resovle, reject) => {
            con.query(queryString, (err, res) => {
             if (err) {
                 return reject(err)
             }
+            //console.log(res)
             return resovle(res)
         })
       })
     },
-    insertAll: function(burgerName) {
+    insertOne: function(burgerName) {
         const queryString = 'INSERT INTO burgers VALUES (?)'
         return new Promise((resovle, reject) => {
         con.query(queryString, [burgerName], (err, res) => {

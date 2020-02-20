@@ -20,4 +20,12 @@ routes.post('/', (req, res) => {
     })
 })
 
+routes.put('/:id', (req, res) => {
+    console.log(req.params.id)
+    const eatBur = orm.updateOne(req.params.id)
+    eatBur.then(ans => {
+        res.status(200).end()
+     })
+})
+
 module.exports = routes

@@ -1,12 +1,6 @@
 const express = require('express')
-const exphbs = require('express-handlebars')
+const bur = require('../models/burger')
 
-const app = express()
+const app = express.Router()
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}))
-app.set('view engine', 'handlebars')
-
-module.exports = ex

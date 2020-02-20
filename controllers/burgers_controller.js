@@ -3,6 +3,7 @@ const express = require('express')
 const orm = require('../config/orm')
 const routes = express.Router()
 
+
 routes.get('/', (req, res) => {
     const allBurs = orm.selectAll()
     allBurs.then( ans =>
@@ -12,8 +13,9 @@ routes.get('/', (req, res) => {
 })
 
 routes.post('/', (req, res) => {
-    const newBurs = orm.insertOne(req.body.newBurger)
-    newBurs.then(ans => {
+    const newBurs = orm.insertOne(req.body.burger_name, 0)
+   newBurs.then(ans => {
+       //console.log(ans)
         res.json({ id: ans.insertId })
     })
 })

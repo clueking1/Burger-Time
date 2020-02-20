@@ -1,3 +1,46 @@
-{{#each burgers}}
-    <p><span>{{id}}. </span> <span>{{burger_name}}</span></p>
-{{/each}}
+
+<h1>Make A Burger</h1>
+
+<div class='notEaten'>
+    <h3>Ready To Eat</h3>
+    {{#each burgers}}
+        {{#unless devoured}}
+            <p class="line"><span class="number">{{id}}. </span> <span class="burgName">{{burger_name}}</span></p>
+            <button type="submit">Eat</button>
+        {{/unless}}
+    {{/each}}
+</div>
+
+<div class='eaten'>
+    <h3>That Was Yummy!!!</h3>
+    {{#each burgers}}
+        {{#if devoured}}
+            <p class="line"><span class="number">{{id}}. </span> <span class="burgName">{{burger_name}}</span></p>
+        {{/if}}
+    {{/each}}
+</div>
+
+<form id = 'addBurger'>
+    <textarea type='text' name='addBurg'></textarea>
+    <button type="submit">Add Burger!</button>
+</form>
+
+<script>
+    $("#addBurger").on("submit", function(event) {
+    event.preventDefault();
+
+    var newBurger = {
+      burger_name: $("#addBurger [name=addBurg]").val().trim()
+    };
+    console.log(newBurger)
+    $.ajax("/", {
+      method: "POST",
+      data: newBurger
+    }).then(
+      function() {
+
+        location.reload();
+      }
+    );
+  });
+</script>

@@ -13,10 +13,10 @@ const orm = {
         })
       })
     },
-    insertOne: function(burgerName) {
-        const queryString = 'INSERT INTO burgers VALUES (?)'
+    insertOne: function(burgerName, burgerBoo) {
+        const queryString = 'INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)'
         return new Promise((resovle, reject) => {
-        con.query(queryString, [burgerName], (err, res) => {
+        con.query(queryString, [burgerName, burgerBoo], (err, res) => {
             if (err) {
                 return reject(err)
             }

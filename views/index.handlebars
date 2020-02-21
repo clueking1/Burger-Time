@@ -1,5 +1,5 @@
 
-<h1>Make A Burger</h1>
+<h1>Grill A Burger</h1>
 
 <div id='notEaten'>
     <h3>Ready To Eat</h3>
@@ -17,13 +17,13 @@
     {{#each burgers}}
         {{#if devoured}}
             <p class="line"><span class="number">{{id}}. </span> <span class="burgName">{{burger_name}}</span></p>
-            <button data-planid="{{id}}" class='orderBur'>Order Again</button>
+            <button data-planid="{{id}}" class='orderBur'>Grill Again</button>
         {{/if}}
     {{/each}}
 </div>
 
 <form id = 'addBurger'>
     <textarea type='text' name='addBurg'></textarea>
-    <button type="submit">Order Burger!</button>
+    <button type="submit">Grill Burger!</button>
 </form>
 

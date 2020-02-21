@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Akronim&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Changa&display=swap');
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0; 
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    margin:0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 1701px;
+    height: 200px;
+    overflow: hidden;
+    opacity: 40%
+}
+
+.line {
+    font-family: 'Changa', 'open sans' ;
+}
+
+.title {
+    font-family: 'Akronim', 'open sans' ;
+    margin:0 auto;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    font-size: 3em;
+    text-align: center;
+    color: #501b1b
+}
+
+.notHead {
+    font-family: 'Akronim', 'open sans' ;
+    color: #501b1b;
+    text-align: center;
+}
+
+.eatenHead {
+    font-family: 'Akronim', 'open sans' ;
+    color: #501b1b;
+    text-align: center;
+
+}
+
+button {
+    font-family: 'Akronim', 'open sans' ;
+    padding: 7px;
+    width: 170px;
+    font-size: 2em;
+    height: 47px;
+    color: #501b1b;
+    cursor:pointer;
+}
+
+.line{
+
+}
+.eatUpDiv {
+    position: relative;
+}
+
+#notEaten {
+
+    width: 50%;
+    float: left;
+    
+}
+
+#notEatenNest {
+    width: 200px;
+ 
+    margin:0px auto;
+
+    left: 0px;
+    right: 0;
+}
+
+.eaten {
+    width: 50%;
+    float: left;
+   
+
+}
+
+.eatenNest {
+    width: 200px;
+ 
+    margin:0px auto;
+
+    left: 0px;
+    right: 0;
+}
+
+.form {
+    position: relative;
+}
+
+#addBurger {
+ 
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    width: 176px
+}
+
+.grillBut {
+    margin-left:-10px;
+}
+
+.txtArea {
+    margin: 20px 0;
+    width: 250px;
+    margin-left: -54px;
+    height: 50px;
+}
+
+.orderBur {
+    margin-left:24px;
+}
+
+.delBur {
+    margin-left:37px;
+}
+
+.notHead {
+    border: 2px black solid;
+    width: 214px;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.eatenHead {
+    border: 2px black solid;
+    width: 214px;
+    padding: 10px;
+    font-size: 2em;
+}

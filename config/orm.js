@@ -24,10 +24,10 @@ const orm = {
         })
       })
     },
-    updateOne: function(burgerID) {
-        const queryString = 'UPDATE burgers SET devoured = true WHERE id = ?'
+    updateOne: function(burBoo,burgerID) {
+        const queryString = 'UPDATE burgers SET devoured = (?) WHERE id = (?)'
         return new Promise((resovle, reject) => {
-        con.query(queryString, [burgerID], (err, res) => {
+        con.query(queryString, [burBoo,burgerID], (err, res) => {
             if (err) {
                 return reject(err)
             }

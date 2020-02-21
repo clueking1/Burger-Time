@@ -15,14 +15,22 @@ routes.get('/', (req, res) => {
 routes.post('/', (req, res) => {
     const newBurs = orm.insertOne(req.body.burger_name, 0)
    newBurs.then(ans => {
-       //console.log(ans)
+
         res.json({ id: ans.insertId })
     })
 })
 
 routes.put('/:id', (req, res) => {
-    console.log(req.params.id)
-    const eatBur = orm.updateOne(req.params.id)
+
+    const eatBur = orm.updateOne(true, req.params.id)
+    eatBur.then(ans => {
+        res.status(200).end()
+     })
+})
+
+routes.put('/api/:id', (req, res) => {
+
+    const eatBur = orm.updateOne(false, req.params.id)
     eatBur.then(ans => {
         res.status(200).end()
      })

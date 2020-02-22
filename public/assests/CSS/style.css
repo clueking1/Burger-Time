@@ -183,3 +183,133 @@ button {
     padding: 10px;
     font-size: 2em;
 }
+
+@media only screen and (max-width: 600px) {
+  .eatUpDiv {
+    position: relative;
+    height: 500px;
+    overflow: scroll;
+}
+
+img {
+
+    width: 600px;
+
+}
+.bottomimg {
+
+    width: 600px;
+
+}
+
+.notHead {
+
+    font-size: 1.5em
+}
+
+.eatenHead {
+
+    font-size: 1.5em
+}
+
+.delBur {
+
+    font-size: 1.5em
+}
+
+.orderBur {
+    font-size: 1.5em
+}
+
+.grillBut {
+    font-size: 1.5em
+}
+
+button {
+    font-family: 'Akronim', 'open sans' ;
+    padding: 5px;
+    width: 119px;
+    font-size: 2em;
+    height: 47px;
+    color: #501b1b;
+    cursor:pointer;
+    background-color: #ffffffe3
+}
+
+.line {
+    font-size: .9em;
+}
+
+
+}
+
+@media only screen and (max-width: 400px) {
+  .eatUpDiv {
+    position: relative;
+    height: 452px;
+    overflow: scroll;
+}
+
+img {
+
+    width: 400px;
+
+}
+.bottomimg {
+
+    width: 400px;
+
+}
+
+.notHead {
+
+    font-size: 1em;
+     border: 2px black solid;
+    width: 146px;
+    margin-left: 10px;
+}
+
+.eatenHead {
+
+    font-size: 1em;
+     border: 2px black solid;
+    width: 140px;
+    margin-left: 10px;
+}
+
+.delBur {
+
+    font-size: 1em
+}
+
+.orderBur {
+    font-size: 1em
+}
+
+.grillBut {
+    font-size: 1em;
+    margin-left:36px;
+}
+
+.txtArea {
+    width: 247px;
+}
+
+button {
+    font-family: 'Akronim', 'open sans' ;
+    padding: 5px;
+    width: 81px;
+    font-size: 2em;
+    height: 47px;
+    color: #501b1b;
+    cursor:pointer;
+    background-color: #ffffffe3
+}
+
+.line {
+    font-size: .7em;
+    margin-left: 12px;
+}
+
+
+}
